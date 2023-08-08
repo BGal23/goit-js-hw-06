@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector("ul.gallery")
+
+images.forEach((liBox, foto) => {
+  const lastBox = document.createElement("li");
+  const lastFoto = document.createElement("img");
+  lastBox.className = "foto"
+  list.append(lastBox, lastFoto);
+})
