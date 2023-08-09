@@ -15,9 +15,11 @@ const images = [
 
 const list = document.querySelector("ul.gallery")
 
-images.forEach((liBox, foto) => {
+images.forEach((foto) => {
   const lastBox = document.createElement("li");
   const lastFoto = document.createElement("img");
-  lastBox.className = "foto"
+  lastFoto.src = foto.url;
+  lastFoto.alt = foto.alt;
+  lastFoto.className = "foto"
   list.append(lastBox, lastFoto);
 })
