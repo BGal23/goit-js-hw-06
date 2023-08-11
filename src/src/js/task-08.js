@@ -4,7 +4,8 @@ form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
-    const {
-    elements: { login, password }
-    } = event.currentTarget;
+
+    if (form.email.value.length === 0 || form.password.value.length === 0) {
+        return alert("Complete the missing fields")
+    }
 }
