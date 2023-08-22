@@ -5,11 +5,13 @@ textBox.addEventListener("blur", () => {
     let value = textBox.value.length
     
     if (value >= dataLength) {
+        textBox.classList.remove('invalid')
         textBox.classList.add('valid');
-        textBox.classList.remove('invalid');   
+        ;   
     }
     else {
+        textBox.classList.remove('valid')
         textBox.classList.add('invalid');
-        textBox.classList.remove('valid');
+        ;
     }
 });
