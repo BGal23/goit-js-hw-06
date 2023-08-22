@@ -13,13 +13,9 @@ const images = [
   },
 ];
 
-const list = document.querySelector("ul.gallery")
+const imagesList = document.querySelector("ul.gallery")
 
-images.forEach((foto) => {
-  const lastBox = document.createElement("li");
-  const lastFoto = document.createElement("img");
-  lastFoto.src = foto.url;
-  lastFoto.alt = foto.alt;
-  lastFoto.className = "foto"
-  list.append(lastBox, lastFoto);
-})
+const addImages = images.map(image => `<li><img src="${image.url} alt="${image.alt}></li>`).join('')
+
+
+imagesList.insertAdjacentHTML('afterbegin', addImages)

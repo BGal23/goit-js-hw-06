@@ -26,3 +26,14 @@ button {
 .foto {
   width: 80vw;
 }
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 30vw;
+  height: 250px;
+}
